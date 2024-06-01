@@ -2230,24 +2230,65 @@
       <p class="sub-heading">
         Fill your details and experience a spa at Ode Spa.
       </p>
-      <form class="user-form" id="user-details">
+      <!-- <form class="user-form" method="post" action="">
         <div class="user-form-container">
           <label>Full Name <span>*</span></label>
-          <input type="text" placeholder="Full Name" id="userName" required />
+          <input type="text" placeholder="Full Name" name="Full-Name" />
         </div>
         <div class="user-form-container">
           <label>Phone <span>*</span></label>
-          <input type="number" placeholder="Phone Number" id="phone" required />
+          <input type="number" placeholder="Phone Number" name="Phone-Number" />
         </div>
         <div class="user-form-container">
           <label>Email Address </label>
-          <input type="email" placeholder="Email Address" id="email" />
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="Email-Address"
+          />
         </div>
 
         <p class="w-100 mb-0 error-text" id="error-message"></p>
 
         <div class="button-container">
-          <button class="submit-btn" id="submit_btn" type="submit">
+          <button class="submit-btn" value="submit" type="submit">
+            Submit
+          </button>
+        </div>
+
+        <div class="terms-and-condition">
+          <span>*T&C Apply</span>
+        </div>
+      </form> -->
+      <form method="post" action="" name="user-form" class="user-form">
+        <div class="user-form-container">
+          <label>Full Name <span>*</span></label>
+          <input
+            type="text"
+            placeholder="Full Name"
+            name="Full-Name"
+            required
+          />
+        </div>
+        <div class="user-form-container">
+          <label>Phone <span>*</span></label>
+          <input
+            type="number"
+            placeholder="Phone Number"
+            name="Phone-Number"
+            required
+          />
+        </div>
+        <div class="user-form-container">
+          <label>Email Address </label>
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="Email-Address"
+          />
+        </div>
+        <div class="button-container">
+          <button class="submit-btn" value="submit" type="submit">
             Submit
           </button>
         </div>
