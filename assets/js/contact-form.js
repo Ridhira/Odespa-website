@@ -122,3 +122,11 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+// Function to display the contact form popup
+function showContactForm() {
+  var contactForm = document.getElementById("form1");
+  contactForm.style.display = "block";
+}
+
+setTimeout(showContactForm, 6000);
