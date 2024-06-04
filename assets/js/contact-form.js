@@ -9,7 +9,7 @@ let phone = document.getElementById("phone");
 let email = document.getElementById("email");
 let submitBtn = document.getElementById("submit_btn");
 
-// close modal function
+// close modal function update
 const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
