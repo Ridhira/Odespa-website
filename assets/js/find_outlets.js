@@ -3,18 +3,21 @@ $(document).ready(function () {
 
   // cities names and icons
   var citiesList = [
-    {city:'Ahmedabad',icon:'./assets/img/city_icons/Ahmedabad.png'},
-    {city:'Bangalore',icon:'./assets/img/city_icons/Bangalore.png'},
-    {city:'Chennai',icon:'./assets/img/city_icons/Chennai.png'},
-    {city:'Hyderabad',icon:'./assets/img/city_icons/Hyderabad.png'},
-    {city:'Kodaikanal',icon:'./assets/img/city_icons/kodaikanal.png'},
-    {city:'Lucknow',icon:'./assets/img/city_icons/lucknow.png'},
-    {city:'Mumbai',icon:'./assets/img/city_icons/mumbai.png'},
-    {city:'Rajamahendravaram',icon:'./assets/img/city_icons/Rajamundry.png'},
-    {city:'Udaipur',icon:'./assets/img/city_icons/udaipur.png'},
-    {city:'Cochin',icon:'./assets/img/city_icons/Cochin.png'},
-    {city:'Jaipur',icon:'./assets/img/city_icons/jaipur.png'},
-    {city:'New Delhi',icon:'./assets/img/city_icons/Delhi.png'}
+    { city: "Ahmedabad", icon: "./assets/img/city_icons/Ahmedabad.png" },
+    { city: "Bangalore", icon: "./assets/img/city_icons/Bangalore.png" },
+    { city: "Chennai", icon: "./assets/img/city_icons/Chennai.png" },
+    { city: "Hyderabad", icon: "./assets/img/city_icons/Hyderabad.png" },
+    { city: "Kodaikanal", icon: "./assets/img/city_icons/kodaikanal.png" },
+    { city: "Lucknow", icon: "./assets/img/city_icons/lucknow.png" },
+    { city: "Mumbai", icon: "./assets/img/city_icons/mumbai.png" },
+    {
+      city: "Rajamahendravaram",
+      icon: "./assets/img/city_icons/Rajamundry.png",
+    },
+    { city: "Udaipur", icon: "./assets/img/city_icons/udaipur.png" },
+    { city: "Cochin", icon: "./assets/img/city_icons/Cochin.png" },
+    { city: "Jaipur", icon: "./assets/img/city_icons/jaipur.png" },
+    { city: "New Delhi", icon: "./assets/img/city_icons/Delhi.png" },
   ];
 
   var getLocationFromURL = location.hash;
@@ -29,13 +32,15 @@ $(document).ready(function () {
   // select location functionality
   $("#spa-location").html(`
     <option value="null" disabled selected>Select a city</option>
-    ${citiesList.map((city) => `<option value="${city.city}">${city.city}</option>`)}
+    ${citiesList.map(
+      (city) => `<option value="${city.city}">${city.city}</option>`
+    )}
     `);
 
-    // List of cities with icons
-    $("#spa_locations").html(
-      citiesList.map(
-        (cities) => `
+  // List of cities with icons
+  $("#spa_locations").html(
+    citiesList.map(
+      (cities) => `
     <div class="col-md-6 col-lg-4 col-xl-3">
 		<div class="service-style5">
 			<div class="service-icon">
@@ -50,12 +55,12 @@ $(document).ready(function () {
 		</div>
 	</div>
     `
-      )
-    );
-  
+    )
+  );
+
   // select city outlets functionality
   $(document).on("click", ".fetcheAction", function () {
-    window.scrollTo(0,275);
+    window.scrollTo(0, 275);
     var selectedCustomLocation = $(this).attr("data-location");
     $("#cards-result").html(`
         <div class="find-spa-spinner text-center pt-5">
@@ -106,7 +111,7 @@ $(document).ready(function () {
           "92d41019-c790-4668-9158-a693e531c1a4",
           "28d6d1a3-a375-4b7d-87c6-137528e280af",
           "382c7ba3-5db8-4b1a-b61c-820590a8ccef",
-         
+
           "16601020-f27c-445c-bc9b-3a7c4e4d82a1",
           "60f37c05-f44a-4dd3-aab7-490c32c61d6e",
           "5a3186b6-7bf9-41ca-8d75-6ab0bb4185c0",
@@ -204,10 +209,11 @@ $(document).ready(function () {
                                     ? ""
                                     : `<a style="color: #a3a2a2" href="tel:${data.contact_info.phone_1.number}">${data.contact_info.phone_1.number}</a>`
                                 }
-                                ${ 
-                                  (data.contact_info.phone_1 !== null) && (data.contact_info.phone_2 !== null) 
-                                  ? ',' 
-                                  : ''
+                                ${
+                                  data.contact_info.phone_1 !== null &&
+                                  data.contact_info.phone_2 !== null
+                                    ? ","
+                                    : ""
                                 } 
                                 ${
                                   data.contact_info.phone_2 == null
@@ -226,7 +232,9 @@ $(document).ready(function () {
 							</div>
 						</div>
 						<div class="package-btn">
-              <a class="vs-btn style3" href="https://odespa.zenoti.com/webstoreNew/services/${data.id}/?ref=lbb">Select</a>
+              <a class="vs-btn style3" href="https://odespa.zenoti.com/webstoreNew/services/${
+                data.id
+              }/?ref=lbb">Select</a>
             </div>
 					</div>
 				</div>`
