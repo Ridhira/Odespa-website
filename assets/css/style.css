@@ -14137,7 +14137,7 @@ tfoot tr {
 }
 
 .testi-text {
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
 }
 
 .popular-services .service-text {

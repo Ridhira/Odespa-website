@@ -114,9 +114,10 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) =>
-      alert("Thank you! your form is submitted successfully.")
-    )
+    .then((response) => {
+      localStorage.setItem("userData", true);
+      alert("Thank you! your form is submitted successfully.");
+    })
     .then(() => {
       window.location.reload();
     })
@@ -124,9 +125,21 @@ form.addEventListener("submit", (e) => {
 });
 
 // Function to display the contact form popup
+const isFormSubmitted = localStorage.getItem("userData");
+
 function showContactForm() {
-  var contactForm = document.getElementById("form1");
-  contactForm.style.display = "block";
+  let contactForm = document.getElementById("form1");
+
+  if (!isFormSubmitted) {
+    contactForm.style.display = "block";
+  }
 }
 
 setTimeout(showContactForm, 6000);
+
+// Hide Form
+
+const hideForm = () => {
+  let contactForm = document.getElementById("form1");
+  contactForm.style.display = "none";
+};
