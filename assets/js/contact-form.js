@@ -109,9 +109,11 @@ const scriptURL =
   "https://script.google.com/macros/s/AKfycbwgCzTPxP13H4LGiRtTGeqAxSOTmLy7t_rfffTm0fKy3CGtyWJlQTBNEhEZ6exXYBNg/exec";
 
 const form = document.forms["user-form"];
+const submitButton = document.querySelector(".submit-btn");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  submitButton.textContent = "Saving...";
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
