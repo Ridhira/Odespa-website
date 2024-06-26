@@ -6,18 +6,18 @@ $(document).ready(function () {
     { city: "Ahmedabad", icon: "./assets/img/city_icons/Ahmedabad.png" },
     { city: "Bangalore", icon: "./assets/img/city_icons/Bangalore.png" },
     { city: "Chennai", icon: "./assets/img/city_icons/Chennai.png" },
+    { city: "Cochin", icon: "./assets/img/city_icons/Cochin.png" },
     { city: "Hyderabad", icon: "./assets/img/city_icons/Hyderabad.png" },
+    { city: "Jaipur", icon: "./assets/img/city_icons/jaipur.png" },
     { city: "Kodaikanal", icon: "./assets/img/city_icons/kodaikanal.png" },
     { city: "Lucknow", icon: "./assets/img/city_icons/lucknow.png" },
     { city: "Mumbai", icon: "./assets/img/city_icons/mumbai.png" },
+    { city: "New Delhi", icon: "./assets/img/city_icons/Delhi.png" },
     {
       city: "Rajamahendravaram",
       icon: "./assets/img/city_icons/Rajamundry.png",
     },
     { city: "Udaipur", icon: "./assets/img/city_icons/udaipur.png" },
-    { city: "Cochin", icon: "./assets/img/city_icons/Cochin.png" },
-    { city: "Jaipur", icon: "./assets/img/city_icons/jaipur.png" },
-    { city: "New Delhi", icon: "./assets/img/city_icons/Delhi.png" },
   ];
 
   var getLocationFromURL = location.hash;

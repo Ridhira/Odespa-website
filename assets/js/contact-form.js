@@ -37,8 +37,8 @@ const openModal = function () {
   overlay.classList.remove("hidden");
 };
 // open modal event
-openModalBtn.addEventListener("click", openModal);
-openModalBtn1.addEventListener("click", openModal);
+// openModalBtn.addEventListener("click", openModal);
+// openModalBtn1.addEventListener("click", openModal);
 
 // @ FORM SUBMISSION
 const fnSendWhatsappNotification = async (name, phone, email) => {
@@ -98,6 +98,7 @@ form.addEventListener("submit", (e) => {
 
 // Function to display the contact form popup
 const isFormSubmitted = localStorage.getItem("userData");
+console.log("isFormSubmitted-->", isFormSubmitted);
 
 function showContactForm() {
   let contactForm = document.getElementById("form1");
@@ -107,7 +108,7 @@ function showContactForm() {
   }
 }
 
-setTimeout(showContactForm, 6000);
+setTimeout(showContactForm, 2000);
 
 // Hide Form
 
