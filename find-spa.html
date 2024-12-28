@@ -37,23 +37,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-HF5CC6WP4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-HF5CC6WP4C");
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PD4SGRDF");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body class="home-4">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PD4SGRDF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- mobile nav bar starts from here -->
     <div class="vs-menu-wrapper">
       <div class="vs-menu-area text-center">
@@ -113,6 +125,9 @@
             </li> -->
             <li>
               <a href="aboutus.html">About Us</a>
+            </li>
+            <li>
+              <a href="https://odespa.com/blogs/">Blogs</a>
             </li>
             <li>
               <a href="https://odespa.zenoti.com/webstoreNew/services?ref=lbb">
@@ -225,6 +240,9 @@
                       >
                     </li> -->
                     <li><a href="aboutus.html">About Us</a></li>
+                    <li>
+                      <a href="https://odespa.com/blogs/">Blogs</a>
+                    </li>
                     <li>
                       <a
                         href="https://odespa.zenoti.com/webstoreNew/services?ref=lbb"
@@ -372,6 +390,17 @@
                       <i class="fal fa-envelope text-theme me-2"></i>
                       info@odespa.com
                     </a>
+                    <br />
+                    <a class="text-inherit">
+                      <i class="fal fa-location text-theme me-2"></i>
+                      Ode Spa 7th Floor, Vaishnavi Cymbol, 7A, Financial
+                      District, Hyderabad, Nanakramguda, Telangana-500032.
+                    </a>
+                    <br />
+                    <a class="text-inherit" href="Privacy-policy.html">
+                      <i class="fal fa-file-invoice text-theme me-2"></i>
+                      Privacy Policy
+                    </a>
                   </p>
 
                   <p></p>
@@ -433,6 +462,21 @@
     <a href="#" class="scrollToTop scroll-btn">
       <i class="far fa-arrow-up"></i>
     </a>
+
+    <script>
+      document.querySelectorAll(".location-link").forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          // Prevent the default anchor behavior
+          const targetUrl = this.getAttribute("href");
+          // Get the href attribute value
+          // Update the URL and force a reload
+          window.location.href = targetUrl;
+          window.location.reload();
+          // Force the page to reload
+        });
+      });
+    </script>
 
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/app.min.js"></script>

@@ -1,0 +1,171 @@
+.sec-location{
+    padding: 3%;
+}
+
+.location-container {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 5%;
+    flex-wrap: wrap;
+}
+
+.card21 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 25%;
+    padding: 5%;
+    text-align: center;
+}
+
+.card21 h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card21 p {
+    margin: 10px 0;
+    color: #666;
+}
+
+button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b38e30;
+}
+
+/* banner */
+
+.banner-section {
+    position: relative;
+    width: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+/* faq  starts*/
+
+.faq-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    
+    border-radius: 8px;
+}
+
+
+
+.faq-item {
+    margin-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.faq-section h2 {
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.faq-item h3 {
+    font-size: 22px;
+}
+
+.why-choose-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+  
+    border-radius: 8px;
+    text-align: center;
+}
+
+.why-choose-section h2 {
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.dropdown {
+    margin-bottom: 20px;
+}
+
+.dropdown-btn {
+    width: 100%;
+    background-color: #b69348;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    padding: 15px;
+    text-align: left;
+    background-color: #f1f1f1;
+    border-left: 4px solid #b69348;
+}
+
+.dropdown-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+
+
+
+
+/* faq ends */
+
+@media (max-width: 962px) {
+
+    .card21 {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        width: 55%;
+        padding: 5%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .card21 h2 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .card21 {
+        width: 75%;
+        padding: 7%;
+       
+    }
+
+    
+}

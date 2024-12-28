@@ -1,0 +1,153 @@
+.serviceBookingContainer {
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1rem 0;
+  background-color: #b69348;
+  margin-top: -4rem;
+  z-index: 100000000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.booking-form-group {
+  margin-bottom: 15px;
+}
+
+.booking-form-group label {
+  display: block;
+  margin-bottom: 0 !important;
+  color: #fff;
+  font-weight: 600;
+}
+
+.booking-form-group select,
+.booking-form-group input {
+  width: 180px;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  color: #303030;
+  outline: none;
+  height: 40px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+#submitBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px !important;
+  border: none;
+  cursor: pointer;
+  /* align-self: center; */
+  margin-top: 5px;
+}
+
+#submitBtn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1400px) {
+  .serviceBookingContainer {
+    width: 1200px;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+  }
+
+  .booking-form-group select,
+  .booking-form-group input {
+    width: 150px;
+    padding: 6px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .serviceBookingContainer {
+    display: none;
+  }
+
+  .bookNowBtn {
+    display: none;
+  }
+}
+
+.serviceBookingContainerBook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.inner-booking-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.booking-form-group-2 label {
+  color: #b69348;
+  text-align: left;
+}
+
+.booking-form-group-2 input,
+.booking-form-group-2 select {
+  width: 300px;
+}
+
+.booking-form-group-2 button {
+  /* width: 100%;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem; */
+}
+
+.error-message {
+  color: red;
+  display: none; /* Initially hide the message */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 668px) {
+  .inner-booking-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .serviceBookingContainerBook {
+    display: none;
+  }
+
+  .requestBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .makeAppointmentBtn {
+    display: none;
+  }
+}

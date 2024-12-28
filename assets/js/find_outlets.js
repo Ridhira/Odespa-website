@@ -22,6 +22,8 @@ $(document).ready(function () {
 
   var getLocationFromURL = location.hash;
 
+  console.log("getLocationFromURL", getLocationFromURL);
+
   if (getLocationFromURL !== "") {
     if (getLocationFromURL.charAt(0) === "#") {
       locationString = getLocationFromURL.substring(1);
@@ -111,7 +113,6 @@ $(document).ready(function () {
           "92d41019-c790-4668-9158-a693e531c1a4",
           "28d6d1a3-a375-4b7d-87c6-137528e280af",
           "382c7ba3-5db8-4b1a-b61c-820590a8ccef",
-
           "16601020-f27c-445c-bc9b-3a7c4e4d82a1",
           "60f37c05-f44a-4dd3-aab7-490c32c61d6e",
           "5a3186b6-7bf9-41ca-8d75-6ab0bb4185c0",
